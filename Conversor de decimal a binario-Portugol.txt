@@ -1,0 +1,155 @@
+//CONVERTE UM NUMERAL DECIMAL PARA BINÁRIO
+programa
+{
+		
+	funcao inicio()
+	{
+		inteiro numerodecimal,numerobinario,resto,numerodividir,opcao
+		inteiro caixa1,caixa2,caixa3,caixa4,caixa5,caixa6,caixa7,caixa8, caixa9, caixa10, caixa11	
+	
+		caixa1=0 caixa2=0 caixa3=0 caixa4=0
+		caixa5=0 caixa6=0 caixa7=0 caixa8=0
+		caixa9=0 caixa10=0 caixa11=0
+
+		faca {	
+			escreva("DIGITE O NÚMERO POSITIVO EM DECIMAL: ")
+			leia(numerodecimal)
+			numerodividir = numerodecimal
+				se (numerodecimal < 0)
+				{
+					escreva("Oops, você digitou um número negativo, tente novamente.\n")
+				}	
+				//AS CAIXAS USADAS VÃO VARIAR DO NÚMERO
+				se (numerodecimal <256) //A PARTIR DAQUI, CADA NÚMERO VARIA AS CONVERSÕES
+				{
+					// CONVERSÃO PARA NÚMEROS DE 0 ATÉ 256
+					para(inteiro contador = 1; contador <=8; contador++)
+					{
+						resto = numerodividir%2
+						numerodividir /=2
+						//ORGANIZAR OS RESULTADOS EM CAIXAS:
+							se (contador == 1)
+								caixa8 = resto
+							senao se(contador ==2)
+								caixa7 = resto
+							senao se(contador ==3)
+								caixa6 = resto
+							senao se(contador ==4)
+								caixa5 = resto
+							senao se(contador ==5)
+								caixa4 = resto
+							senao se(contador ==6)
+								caixa3 = resto
+							senao se(contador ==7)
+								caixa2 = resto
+							senao se(contador ==8)
+								caixa1 = resto
+					}
+					escreva("\nCÓDIGO BINÁRIO ORGANIZADO DE ",numerodecimal,":\n")
+					escreva(caixa1,caixa2,caixa3,caixa4,caixa5,caixa6,caixa7,caixa8)
+				}
+				//AGORA, SE O NÚMERO ESTIVER ENTRE 255 E 511, O NÚMERO DE CAIXAS SERÁ 9 E ASSIM POR DIANTE PARA CADA LIMITE!
+				se (numerodecimal >=256 e numerodecimal <512)
+				{
+					para(inteiro contador = 1; contador <=9; contador++)
+					{
+						resto = numerodividir%2
+						numerodividir /=2
+							se (contador == 1)
+								caixa9 = resto
+							senao se(contador ==2)
+								caixa8 = resto
+							senao se(contador ==3)
+								caixa7 = resto
+							senao se(contador ==4)
+								caixa6 = resto
+							senao se(contador ==5)
+								caixa5 = resto
+							senao se(contador ==6)
+								caixa4 = resto
+							senao se(contador ==7)
+								caixa3 = resto
+							senao se(contador ==8)
+								caixa2 = resto
+							senao se(contador ==9)
+								caixa1 = resto
+					}
+					escreva("\nCÓDIGO BINÁRIO ORGANIZADO DE ",numerodecimal,":\n")
+					escreva(caixa1,caixa2,caixa3,caixa4,caixa5,caixa6,caixa7,caixa8,caixa9)
+				}
+				se (numerodecimal >=512 e numerodecimal <1024)
+				{
+					para(inteiro contador = 1; contador <=10; contador++)
+					{
+						resto = numerodividir%2
+						numerodividir /=2
+							se (contador == 1)
+								caixa10 = resto
+							senao se(contador ==2)
+								caixa9 = resto
+							senao se(contador ==3)
+								caixa8 = resto
+							senao se(contador ==4)
+								caixa7 = resto
+							senao se(contador ==5)
+								caixa6 = resto
+							senao se(contador ==6)
+								caixa5 = resto
+							senao se(contador ==7)
+								caixa4 = resto
+							senao se(contador ==8)
+								caixa3 = resto
+							senao se(contador ==9)
+								caixa2 = resto
+							senao se(contador ==10)
+								caixa1 = resto
+					}
+					escreva("\nCÓDIGO BINÁRIO ORGANIZADO DE ",numerodecimal,":\n")
+					escreva(caixa1,caixa2,caixa3,caixa4,caixa5,caixa6,caixa7,caixa8,caixa9,caixa10)
+				}
+				se (numerodecimal >=1024 e numerodecimal <2048)
+				{
+					para(inteiro contador = 1; contador <=11; contador++)
+					{
+						resto = numerodividir%2
+						numerodividir /=2
+							se (contador == 1)
+								caixa11 = resto
+							senao se(contador ==2)
+								caixa10 = resto
+							senao se(contador ==3)
+								caixa9 = resto
+							senao se(contador ==4)
+								caixa8 = resto
+							senao se(contador ==5)
+								caixa7 = resto
+							senao se(contador ==6)
+								caixa6 = resto
+							senao se(contador ==7)
+								caixa5 = resto
+							senao se(contador ==8)
+								caixa4 = resto
+							senao se(contador ==9)
+								caixa3 = resto
+							senao se(contador ==10)
+								caixa2 = resto
+							senao se(contador ==11)
+								caixa1 = resto
+					}
+					escreva("\nCÓDIGO BINÁRIO ORGANIZADO DE ",numerodecimal,":\n")
+					escreva(caixa1,caixa2,caixa3,caixa4,caixa5,caixa6,caixa7,caixa8,caixa9,caixa10)
+				}
+				se (numerodecimal>=2048)
+				{
+					escreva("Oops, você digitou um número tão grande que não conseguimos computar, tente outro menor ;)\n")
+				}
+				//FIM DA APLICAÇÃO (OU  NÃO)
+			escreva("\nDESEJA ENCERRAR O APLICATIVO?\n")
+			escreva("[1] - NÃO, QUERO CONTINUAR\n")
+			escreva("[2] - SIM QUERO ENCERRAR \n")
+			escreva("DIGITE O NÚMERO DA OPÇÃO: ")
+			leia(opcao)
+			limpa()
+		}enquanto(opcao!=2)
+	}
+}

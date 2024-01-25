@@ -1,6 +1,6 @@
 # Conversor Decimal para Binário
 
-Bem-vindo ao Conversor Decimal para Binário! Este é um simples programa desenvolvido durante o 1° período do curso de Análise e Desenvolvimento de Sistemas em 2023. O programa permite que você converta números decimais positivos em suas representações binárias correspondentes.
+Este é um simples programa desenvolvido durante o 1° período do curso de Análise e Desenvolvimento de Sistemas em 2023. O programa permite que você converta números decimais positivos em suas representações binárias correspondentes.
 
 ## Instruções de Uso
 
@@ -60,3 +60,6 @@ Ao final de cada conversão, você terá a opção de encerrar o aplicativo. Se 
 Esperamos que este Conversor Decimal para Binário seja útil para suas necessidades de conversão. Caso tenha algum problema ou dúvida, sinta-se à vontade para entrar em contato.
 
 Divirta-se codificando!
+
+**Autor:** Antonio Ivo De Oliveira Souza
+**E-mail:** 2005antonioivo@gmail.com
